@@ -8,11 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
     async function fetchData() {
         try {
             const response = await fetch('/api/recieveData.js', {
-                method: "POST",
+                method: "GET",
                 headers: {
                     "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ type: 'YourDataType', message: 'YourMessage' }) // Example payload
+                }
             });
 
             if (!response.ok) {
@@ -28,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Fetch Error:", error);
         }
     }
+
 
     function handleResponseData(data) {
         const messagesBox = document.getElementById("messages-content");

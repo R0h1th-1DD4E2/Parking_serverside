@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function fetchData() {
         try {
-            const response = await fetch('/api/recieveData', { // No .js needed
+            const response = await fetch('/api/recieveData.js', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
